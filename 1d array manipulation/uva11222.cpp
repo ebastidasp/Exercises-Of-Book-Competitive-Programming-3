@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
- 
+
 using namespace std;
- 
+
 void remove(std::vector<int> &v)
 {
     auto end = v.end();
@@ -10,7 +10,7 @@ void remove(std::vector<int> &v)
     }
     v.erase(end, v.end());
 }
- 
+
 int main()
 {
   int tests;
@@ -85,4 +85,3 @@ int main()
   }
   return 0;
 }
- 

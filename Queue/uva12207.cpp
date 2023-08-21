@@ -1,18 +1,15 @@
 #include <bits/stdc++.h>
-#include <fstream>
 
 using namespace std;
 
 int main(){
-  ofstream o;
-  o.open("output.txt");
   int population, instruction;
   int testId = 1;
   cin.tie(NULL);
   while(cin>>population>>instruction){
     if(!population && ! instruction)
       break;
-    o<<"Case "<<testId++<<":\n";
+    cout<<"Case "<<testId++<<":\n";
     cin.get();
     deque<int> people;
     deque<int>::iterator it;
@@ -25,7 +22,7 @@ int main(){
       char instruction;
       switch(input.at(0)){
         case 'N':
-          o<<people.front()<<'\n';
+          cout<<people.front()<<'\n';
           people.push_back(people.front());
           people.pop_front();
           break;

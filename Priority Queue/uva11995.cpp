@@ -1,11 +1,8 @@
 #include <bits/stdc++.h>
-#include <fstream>
 
 using namespace std;
 
 int main(){
-  ofstream o;
-  o.open("o2.txt");
   int n;
   while(cin>>n){
     queue<int> q;
@@ -57,16 +54,16 @@ int main(){
       }
     }
     if(numPosDataStructures == 0){
-      o<<"impossible\n";
+      cout<<"impossible\n";
     } else if(numPosDataStructures > 1){
-      o<<"not sure\n";
+      cout<<"not sure\n";
     } else {
       if(canBeQueue && !canBeStack && !canBePQ){
-        o<<"queue\n";
+        cout<<"queue\n";
       } else if(!canBeQueue && canBeStack && !canBePQ){
-        o<<"stack\n";
+        cout<<"stack\n";
       } else if(!canBeQueue && !canBeStack && canBePQ){
-        o<<"priority queue\n";
+        cout<<"priority queue\n";
       }
     }
   }
